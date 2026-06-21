@@ -1,0 +1,102 @@
+WARNING 2026-06-18 10:36:38,174 log 11708 7148 Bad Request: /api/v1/ai/copilot/
+WARNING 2026-06-18 10:36:48,308 log 11708 7148 Unauthorized: /api/v1/auth/login/
+WARNING 2026-06-18 10:36:48,847 log 11708 7148 Unauthorized: /api/v1/auth/profile/
+WARNING 2026-06-18 10:36:52,766 log 11708 7148 Bad Request: /api/v1/crm/customers/
+WARNING 2026-06-18 10:37:12,429 log 11708 7148 Bad Request: /api/v1/projects/
+INFO 2026-06-18 10:37:23,715 autoreload 5584 3008 Watching for file changes with StatReloader
+INFO 2026-06-18 10:44:21,271 basehttp 5584 10776 "OPTIONS /api/v1/auth/profile/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:21,277 basehttp 5584 5900 "OPTIONS /api/v1/notifications/unread-count/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:21,277 basehttp 5584 1752 "OPTIONS /api/v1/auth/profile/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:21,277 basehttp 5584 3988 "OPTIONS /api/v1/analytics/dashboard/ HTTP/1.1" 200 0
+WARNING 2026-06-18 10:44:22,395 log 5584 10776 Unauthorized: /api/v1/auth/profile/
+WARNING 2026-06-18 10:44:22,396 log 5584 5900 Unauthorized: /api/v1/analytics/dashboard/
+WARNING 2026-06-18 10:44:22,396 log 5584 3988 Unauthorized: /api/v1/notifications/unread-count/
+WARNING 2026-06-18 10:44:22,398 basehttp 5584 10776 "GET /api/v1/auth/profile/ HTTP/1.1" 401 183
+WARNING 2026-06-18 10:44:22,399 basehttp 5584 5900 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 401 183
+WARNING 2026-06-18 10:44:22,399 basehttp 5584 3988 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 401 183
+WARNING 2026-06-18 10:44:22,421 log 5584 10776 Unauthorized: /api/v1/auth/profile/
+INFO 2026-06-18 10:44:22,422 basehttp 5584 5900 "OPTIONS /api/v1/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:22,422 basehttp 5584 1752 "OPTIONS /api/v1/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:22,422 basehttp 5584 3988 "OPTIONS /api/v1/auth/token/refresh/ HTTP/1.1" 200 0
+WARNING 2026-06-18 10:44:22,422 basehttp 5584 10776 "GET /api/v1/auth/profile/ HTTP/1.1" 401 183
+INFO 2026-06-18 10:44:23,204 basehttp 5584 5900 "POST /api/v1/auth/token/refresh/ HTTP/1.1" 200 923
+INFO 2026-06-18 10:44:23,219 basehttp 5584 1752 "POST /api/v1/auth/token/refresh/ HTTP/1.1" 200 923
+INFO 2026-06-18 10:44:23,256 basehttp 5584 3988 "POST /api/v1/auth/token/refresh/ HTTP/1.1" 200 923
+WARNING 2026-06-18 10:44:23,259 log 5584 5900 Unauthorized: /api/v1/notifications/unread-count/
+WARNING 2026-06-18 10:44:23,263 log 5584 1752 Unauthorized: /api/v1/analytics/dashboard/
+WARNING 2026-06-18 10:44:23,263 basehttp 5584 5900 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 401 51
+WARNING 2026-06-18 10:44:23,266 basehttp 5584 1752 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 401 51
+WARNING 2026-06-18 10:44:23,271 log 5584 3988 Unauthorized: /api/v1/auth/profile/
+WARNING 2026-06-18 10:44:23,272 basehttp 5584 3988 "GET /api/v1/auth/profile/ HTTP/1.1" 401 51
+INFO 2026-06-18 10:44:23,285 basehttp 5584 10776 "POST /api/v1/auth/token/refresh/ HTTP/1.1" 200 923
+WARNING 2026-06-18 10:44:23,295 log 5584 10776 Unauthorized: /api/v1/auth/profile/
+WARNING 2026-06-18 10:44:23,295 basehttp 5584 10776 "GET /api/v1/auth/profile/ HTTP/1.1" 401 51
+INFO 2026-06-18 10:44:31,971 basehttp 5584 10776 "OPTIONS /api/v1/auth/login/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:34,684 basehttp 5584 10776 "POST /api/v1/auth/login/ HTTP/1.1" 200 1419
+INFO 2026-06-18 10:44:35,039 basehttp 5584 1752 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 10:44:35,048 basehttp 5584 10776 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 10:44:35,091 basehttp 5584 1752 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 10:44:35,239 basehttp 5584 3988 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 200 1242
+INFO 2026-06-18 10:44:52,768 basehttp 5584 10776 "OPTIONS /api/v1/crm/stats/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:52,769 basehttp 5584 1752 "OPTIONS /api/v1/crm/customers/?search= HTTP/1.1" 200 0
+INFO 2026-06-18 10:44:52,983 basehttp 5584 3988 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 10:44:52,983 basehttp 5584 5900 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 10:44:53,954 basehttp 5584 5900 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 10:44:53,990 basehttp 5584 1752 "GET /api/v1/crm/stats/ HTTP/1.1" 200 110
+INFO 2026-06-18 10:44:54,113 basehttp 5584 10776 "GET /api/v1/crm/customers/?search= HTTP/1.1" 200 3450
+INFO 2026-06-18 10:45:07,253 basehttp 5584 1752 "OPTIONS /api/v1/projects/stats/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:07,261 basehttp 5584 10776 "OPTIONS /api/v1/projects/?search= HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:07,469 basehttp 5584 10776 "GET /api/v1/projects/stats/ HTTP/1.1" 200 60
+INFO 2026-06-18 10:45:07,638 basehttp 5584 1752 "GET /api/v1/projects/?search= HTTP/1.1" 200 4536
+INFO 2026-06-18 10:45:11,670 basehttp 5584 10776 "OPTIONS /api/v1/auth/users/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:11,670 basehttp 5584 1752 "OPTIONS /api/v1/crm/customers/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:12,178 basehttp 5584 1752 "GET /api/v1/auth/users/ HTTP/1.1" 200 1056
+INFO 2026-06-18 10:45:12,387 basehttp 5584 10776 "GET /api/v1/crm/customers/ HTTP/1.1" 200 3450
+INFO 2026-06-18 10:45:19,474 basehttp 5584 10776 "OPTIONS /api/v1/tasks/?search= HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:19,582 basehttp 5584 10776 "GET /api/v1/tasks/?search= HTTP/1.1" 200 8066
+INFO 2026-06-18 10:45:23,037 basehttp 5584 10776 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 10:45:25,823 basehttp 5584 10776 "OPTIONS /api/v1/calendar/events/?month=6&year=2026 HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:26,101 basehttp 5584 10776 "GET /api/v1/calendar/events/?month=6&year=2026 HTTP/1.1" 200 52
+INFO 2026-06-18 10:45:29,357 basehttp 5584 1752 "OPTIONS /api/v1/inventory/stats/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:29,358 basehttp 5584 10776 "OPTIONS /api/v1/inventory/items/?search= HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:29,436 basehttp 5584 10776 "GET /api/v1/inventory/stats/ HTTP/1.1" 200 99
+INFO 2026-06-18 10:45:29,437 basehttp 5584 1752 "GET /api/v1/inventory/items/?search= HTTP/1.1" 200 2954
+INFO 2026-06-18 10:45:32,785 basehttp 5584 1752 "OPTIONS /api/v1/inventory/movements/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:32,832 basehttp 5584 1752 "GET /api/v1/inventory/movements/ HTTP/1.1" 200 52
+INFO 2026-06-18 10:45:37,507 basehttp 5584 10776 "OPTIONS /api/v1/analytics/revenue/?period=month HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:37,515 basehttp 5584 10776 "OPTIONS /api/v1/ai/revenue-analysis/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:37,516 basehttp 5584 5900 "OPTIONS /api/v1/analytics/customers/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:37,520 basehttp 5584 3988 "OPTIONS /api/v1/analytics/employees/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:37,581 basehttp 5584 10776 "GET /api/v1/analytics/revenue/?period=month HTTP/1.1" 200 78
+INFO 2026-06-18 10:45:37,601 basehttp 5584 5900 "GET /api/v1/ai/revenue-analysis/ HTTP/1.1" 200 553
+INFO 2026-06-18 10:45:37,608 basehttp 5584 3988 "GET /api/v1/analytics/customers/ HTTP/1.1" 200 669
+INFO 2026-06-18 10:45:37,638 basehttp 5584 1752 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 200 1242
+INFO 2026-06-18 10:45:37,659 basehttp 5584 10776 "GET /api/v1/analytics/employees/ HTTP/1.1" 200 108
+INFO 2026-06-18 10:45:44,327 basehttp 5584 10776 "OPTIONS /api/v1/ai/insights/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:44,327 basehttp 5584 1752 "OPTIONS /api/v1/ai/project-risks/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:44,464 basehttp 5584 10776 "GET /api/v1/ai/project-risks/ HTTP/1.1" 200 466
+INFO 2026-06-18 10:45:44,467 basehttp 5584 1752 "GET /api/v1/ai/insights/ HTTP/1.1" 200 415
+INFO 2026-06-18 10:45:53,066 basehttp 5584 1752 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 10:45:53,126 basehttp 5584 1752 "OPTIONS /api/v1/ai/copilot/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:53,250 basehttp 5584 1752 "POST /api/v1/ai/copilot/ HTTP/1.1" 200 390
+INFO 2026-06-18 10:45:58,596 basehttp 5584 1752 "OPTIONS /api/v1/notifications/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:45:58,624 basehttp 5584 1752 "GET /api/v1/notifications/ HTTP/1.1" 200 1131
+INFO 2026-06-18 10:46:02,991 basehttp 5584 1752 "OPTIONS /api/v1/notifications/?unread=true HTTP/1.1" 200 0
+INFO 2026-06-18 10:46:03,005 basehttp 5584 1752 "GET /api/v1/notifications/?unread=true HTTP/1.1" 200 1131
+INFO 2026-06-18 10:46:05,550 basehttp 5584 1752 "OPTIONS /api/v1/notifications/mark-all-read/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:46:05,871 basehttp 5584 1752 "POST /api/v1/notifications/mark-all-read/ HTTP/1.1" 200 46
+INFO 2026-06-18 10:46:05,905 basehttp 5584 10776 "GET /api/v1/notifications/?unread=true HTTP/1.1" 200 52
+INFO 2026-06-18 10:46:05,906 basehttp 5584 1752 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 10:46:10,619 basehttp 5584 1752 "OPTIONS /api/v1/companies/ HTTP/1.1" 200 0
+INFO 2026-06-18 10:46:10,848 basehttp 5584 1752 "GET /api/v1/companies/ HTTP/1.1" 200 532
+INFO 2026-06-18 11:28:40,913 basehttp 5584 9384 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 11:29:11,237 basehttp 5584 9384 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 11:29:15,437 basehttp 5584 9384 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 200 1242
+INFO 2026-06-18 11:29:41,350 basehttp 5584 9384 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 11:30:11,529 basehttp 5584 9384 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 11:30:15,571 basehttp 5584 9384 "GET /api/v1/analytics/dashboard/ HTTP/1.1" 200 1242
+INFO 2026-06-18 11:34:30,564 basehttp 5584 9384 "GET /api/v1/notifications/unread-count/ HTTP/1.1" 200 11
+INFO 2026-06-18 11:34:32,380 basehttp 5584 12524 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 11:34:32,421 basehttp 5584 10292 "GET /api/v1/crm/stats/ HTTP/1.1" 200 110
+INFO 2026-06-18 11:34:32,483 basehttp 5584 8032 "GET /api/v1/auth/profile/ HTTP/1.1" 200 513
+INFO 2026-06-18 11:34:32,502 basehttp 5584 9384 "GET /api/v1/crm/customers/?search= HTTP/1.1" 200 3450

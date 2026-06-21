@@ -1,0 +1,115 @@
+╔══════════════════════════════════════════════════════════╗
+║         NexusOne AI — Complete Setup Guide               ║
+║         Windows 10 | PostgreSQL 18 | Node 22             ║
+╚══════════════════════════════════════════════════════════╝
+
+Your project is at: D:\PROJECT\nexusone
+
+═══════════════════════════════════════════════════════════
+STEP 1 — Add PostgreSQL to PATH (run once)
+═══════════════════════════════════════════════════════════
+Open VS Code terminal and run:
+
+  setx PATH "%PATH%;C:\Program Files\PostgreSQL\18\bin"
+
+Then CLOSE and REOPEN the terminal.
+
+═══════════════════════════════════════════════════════════
+STEP 2 — Create Database (run once)
+═══════════════════════════════════════════════════════════
+  "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres
+
+Inside psql type:
+  CREATE DATABASE nexusone_db;
+  CREATE USER nexusone_user WITH PASSWORD '1234';
+  GRANT ALL PRIVILEGES ON DATABASE nexusone_db TO nexusone_user;
+  \q
+
+═══════════════════════════════════════════════════════════
+STEP 3 — Backend Setup (run once)
+═══════════════════════════════════════════════════════════
+  cd D:\PROJECT\nexusone\backend
+  rmdir /s /q venv
+  python -m venv venv
+  venv\Scripts\activate
+  pip install -r requirements\base.txt
+  python manage.py migrate
+  python manage.py create_demo_data
+
+═══════════════════════════════════════════════════════════
+STEP 3B — Run Automated Tests (recommended, takes ~30 seconds)
+═══════════════════════════════════════════════════════════
+  python manage.py test tests
+
+  You should see "OK" and "Ran 59 tests". This confirms every module
+  (CRM, Projects, Tasks, Billing, Support, HRM, Inventory, Calendar, AI,
+  and data isolation between companies) actually works before you start
+  building on top of it.
+
+═══════════════════════════════════════════════════════════
+STEP 4 — Start Backend (every time)
+═══════════════════════════════════════════════════════════
+  cd D:\PROJECT\nexusone\backend
+  venv\Scripts\activate
+  python manage.py runserver
+
+  → Backend runs at: http://127.0.0.1:8000
+
+═══════════════════════════════════════════════════════════
+STEP 5 — Start Frontend (every time, new terminal)
+═══════════════════════════════════════════════════════════
+  cd D:\PROJECT\nexusone\frontend
+  npm install
+  npm run dev
+
+  → Frontend runs at: http://localhost:3000
+
+  Optional — run frontend tests:
+  npm test
+
+═══════════════════════════════════════════════════════════
+LOGIN CREDENTIALS
+═══════════════════════════════════════════════════════════
+  Admin:   admin@nexusone.ai   / Admin@123456
+  Manager: manager@nexusone.ai / Manager@123456
+
+═══════════════════════════════════════════════════════════
+TO ENABLE AI FEATURES (Optional)
+═══════════════════════════════════════════════════════════
+Open: D:\PROJECT\nexusone\backend\.env
+Change: OPENAI_API_KEY=sk-your-openai-api-key-here
+To:    OPENAI_API_KEY=sk-YOUR-REAL-KEY-HERE
+
+Then restart backend. AI works without key but with limited responses.
+
+═══════════════════════════════════════════════════════════
+TO ENABLE ERROR TRACKING (Optional)
+═══════════════════════════════════════════════════════════
+Backend: add SENTRY_DSN=your-dsn-here to backend\.env
+Frontend: add NEXT_PUBLIC_SENTRY_DSN=your-dsn-here to frontend\.env.local
+Both are no-ops (app works exactly as before) if left blank.
+
+═══════════════════════════════════════════════════════════
+WHAT'S FIXED — see CHANGELOG_PRODUCTION_FIXES.md for full detail
+═══════════════════════════════════════════════════════════
+✅ Automated test suite: 59 backend tests + 17 frontend tests, all passing
+✅ CI/CD pipeline (.github/workflows/ci.yml) — tests run on every push
+✅ Sentry error tracking wired in (opt-in via env var)
+✅ Fixed hardcoded DB credentials — .env DATABASE_URL now actually works
+✅ Fixed Redis cache/WebSocket layer not using REDIS_URL from .env
+✅ Fixed Invoice/Payment/Employee/Leave creation 400 errors
+✅ Added missing Tasks stats endpoint
+✅ Expanded Audit (CSV export, stats), Documents (stats), Approvals (pending queue)
+✅ Fixed duplicate/conflicting User type causing Profile & Settings type errors
+✅ Fixed broken FilePdf icon import, FormData type mismatch
+✅ Removed leftover junk folders and the real .env from the package
+✅ CRM — Add Customer, Add Lead, Add Project from customer
+✅ Projects — New Project modal with CRM link
+✅ Tasks — New Task with checklist & assignee
+✅ HRM — Add Employee, Request Leave, Add Salary
+✅ Billing — New Invoice with line items, Record Payment, Add Expense
+✅ Support — New Ticket, AI Summary, Reply panel
+✅ Inventory — Add Item, Add Supplier, Stock In/Out
+✅ Calendar — full new module: events, meeting links, reminders
+✅ AI Copilot — works with and without OpenAI key
+
