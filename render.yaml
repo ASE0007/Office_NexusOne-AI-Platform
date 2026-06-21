@@ -1,0 +1,7 @@
+services: 
+  - type: web 
+    name: nexusone-backend 
+    env: python 
+    rootDir: backend 
+    buildCommand: "pip install -r requirements/base.txt && python manage.py migrate && python manage.py create_demo_data" 
+    startCommand: "gunicorn config.wsgi:application --bind 0.0.0.0:$PORT" 
