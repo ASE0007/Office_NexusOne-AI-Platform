@@ -316,3 +316,4 @@ if SENTRY_DSN:
         # sentry-sdk not installed; app continues to work fine without it
         pass
 
+CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}} 
